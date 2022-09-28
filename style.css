@@ -1,0 +1,742 @@
+@font-face {
+  font-family: "satoshi";
+  src: url("./assets/fonts/Satoshi-Variable.ttf");
+}
+/* @font-face {
+  font-family: "satoshi";
+  src: url("./assets/fonts");
+  font-weight: 100;
+} */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+#main {
+  position: relative;
+  overflow: hidden;
+}
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#page1 .p1top {
+  color: #fff;
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-family: "satoshi";
+}
+.p1top p {
+  width: 10vw;
+  font-size: 1.1vw;
+  /* font-weight: 600; */
+  line-height: 0.9vw;
+}
+.p1top h1 {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 100;
+  font-size: 3vw;
+  line-height: 1.2vw;
+}
+#page1 .p1bottom {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.compo {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: calc((4vw + 6vh) / 2);
+  position: relative;
+  cursor: pointer;
+}
+.compo:hover {
+  scale: 0.97;
+}
+#page1 .p1bottom .p1left {
+  overflow: hidden;
+  margin-right: 0.5vw;
+  height: 60vh;
+  width: 49vw;
+  background-color: rgb(41, 0, 232);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  color: rgb(249, 249, 249);
+  font-family: "satoshi";
+  row-gap: 40%;
+  column-gap: 70%;
+  padding: 1vh 1vw;
+  padding-right: 3vw;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.p1left #anime {
+  position: absolute;
+  height: calc((12vw + 18vh) / 2.6);
+  width: calc((12vw + 18vh) / 2.6);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  animation: rotate 10s linear infinite both;
+}
+#page1 .p1bottom .p1left:hover #rec {
+  background-color: rgb(249, 249, 249);
+}
+#page1 .p1bottom .p1left:hover #tri {
+  background-color: rgb(255, 244, 128);
+}
+#page1 .p1bottom .p1left:hover #cir {
+  background-color: rgb(255, 174, 220);
+}
+.p1left #rec {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 00%;
+  left: 100%;
+  height: calc((6vw + 9vh) / 2);
+  width: calc((6vw + 9vh) / 2);
+  background-color: rgba(255, 255, 255, 0.381);
+  animation: rotate 8s linear infinite both;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.p1left #cir {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: -5%;
+  left: -20%;
+  border-radius: 50%;
+  height: calc((6vw + 9vh) / 2);
+  width: calc((6vw + 9vh) / 2);
+  background-color: rgba(255, 255, 255, 0.381);
+  animation: rotate 8s linear infinite both;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.p1left #tri {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  height: calc((6vw + 9vh) / 2);
+  width: calc((6vw + 9vh) / 2);
+  background-color: rgba(255, 255, 255, 0.381);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: rotate 8s linear infinite both;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+.p1left .text {
+  position: absolute;
+  display: flex;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#page1 .p1bottom h1 {
+  font-weight: 100;
+  font-size: 1.3vw;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+#page1 .p1bottom .p1right .compo .text {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  overflow: hidden;
+  font-family: "satoshi";
+}
+.compo:hover .texty {
+  opacity: 0;
+  pointer-events: none;
+}
+.compo .texty {
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  font-family: "satoshi";
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw;
+  font-weight: 300;
+  margin: 8vh 0vw;
+  padding: 0 2vw;
+  margin-top: 20vh;
+}
+#page1 .p1bottom .p1right .compo .text h1 {
+  font-size: 2.5vw;
+  opacity: 0;
+  scale: 0.8;
+  animation: scroll2 3s linear infinite both;
+}
+#page1 .p1bottom .p1right .compo:hover .text h1 {
+  opacity: 1;
+  scale: 1;
+}
+#page1 .p1bottom:hover .text h1 {
+  opacity: 0;
+  scale: 0.8;
+}
+#page1 .p1bottom .text h1 {
+  transform: translateX(70%);
+  font-size: 5vw;
+  animation: scroll 10s linear infinite both;
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#page1 .p1bottom i {
+  font-size: 2vw;
+}
+#page1 .p1bottom .r1top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page1 .p1bottom .r1top .t1left {
+  background-color: rgb(255, 255, 255);
+  height: 29vh;
+  width: 24.5vw;
+  margin-bottom: 1vh;
+  margin-right: 0.5vw;
+  position: relative;
+}
+#page1 .p1bottom .r1top .t1right {
+  background-color: rgb(27, 27, 31);
+  height: 29vh;
+  width: 24.5vw;
+  margin-bottom: 1vh;
+  margin-right: 0.5vw;
+}
+#page1 .p1bottom .r1bottom {
+  border: 1px solid transparent;
+  width: 49vw;
+  height: 29vh;
+  background-color: rgb(255, 244, 128);
+}
+#page2 {
+  height: 200vh;
+  width: 100vw;
+}
+.we {
+  height: 75vh;
+  width: 99vw;
+  border-radius: calc((4vw + 6vh) / 2);
+  background-color: rgb(27, 27, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.we .wel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 7vh 3vw;
+  color: rgb(155, 152, 239);
+}
+.we .wel h4 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1vw;
+}
+.we .wel h1 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 6.5vw;
+  font-weight: 300;
+  line-height: 6.2vw;
+  letter-spacing: -0.2vw;
+}
+.wel1 {
+  width: 75%;
+  height: 100%;
+}
+.we #wer1 {
+  width: 25%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#textrot {
+  height: calc((20vh + 10vw) / 2);
+  width: calc((20vh + 10vw) / 2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#textrot #ig {
+  height: calc((20vh + 10vw) / 2);
+  width: calc((20vh + 10vw) / 2);
+  position: absolute;
+  top: 00%;
+  left: 00%;
+  background-image: url("./assets/cirText.png");
+  background-size: contain;
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+.crafts {
+  border-radius: calc((4vw + 6vh) / 2);
+  height: 30vh;
+  width: 49.8vw;
+  background-color: rgb(27, 27, 31);
+  margin: 0.5vh 0;
+  position: relative;
+}
+.crafttext {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 3vw;
+}
+.crafttext .cr1 {
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70%;
+  width: 70%;
+  color: rgb(155, 152, 239);
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.cr1 h1 {
+  font-size: 1vw;
+}
+.cr1 p {
+  font-size: 1.1vw;
+  line-height: 1.3vw;
+}
+.overcrafts {
+  all: inherit;
+  border-radius: calc((4vw + 6vh) / 2);
+  background-color: rgb(165, 161, 255);
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.531) -5px 0 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.overcrafts h2 {
+  font-size: 1vw;
+  margin-bottom: 2vh;
+}
+.overcrafts h1 {
+  font-size: 2.5vw;
+  margin-bottom: 2vh;
+  font-style: italic;
+}
+#page3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#page3 .p3compo {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  color: rgb(249, 249, 249);
+  font-family: "satoshi";
+  row-gap: 50%;
+  column-gap: 55%;
+  padding: 2vh 5vw;
+  padding-right: 3vw;
+  position: relative;
+  border-radius: calc((4vw + 6vh) / 2);
+  margin: 0 0.5vw;
+  color: black;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#page3 .p3compo:hover {
+  scale: 0.98;
+}
+#page3 .p3compo:hover .center img {
+  scale: 1.08;
+}
+.p3compo .gridWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.p3compo .gridWrapper:nth-child(1) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.p3compo .gridWrapper:nth-child(3) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.p3compo .center {
+  position: absolute;
+  height: 10vh;
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.p3compo .center img {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.p3compo h1 {
+  font-size: 1vw;
+}
+#page3 #p3top {
+  background-color: #fff;
+  width: 99vw;
+  height: 60vh;
+}
+#p3bottom #p3left {
+  margin-top: 1vh;
+  height: 40vh;
+  width: 49vw;
+  background-color: rgb(203, 229, 255);
+}
+#p3bottom #p3right {
+  margin-top: 1vh;
+  height: 40vh;
+  width: 49vw;
+  background-color: rgb(2, 31, 35);
+  color: rgb(23, 226, 173);
+}
+#page3 #p3bottom {
+  display: flex;
+}
+#page4 {
+  height: 150vh;
+  width: 99vw;
+  color: rgb(255, 174, 216);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50vh;
+  overflow: hidden;
+  border-radius: calc((4vw + 6vh) / 2);
+  background-color: rgb(31, 26, 28);
+  margin: 1vh 0.5vw;
+}
+#page4 #last {
+  margin-right: 0.5vw;
+}
+#page4 .text {
+  width: 100vw;
+  display: flex;
+  white-space: nowrap;
+}
+#page4 .text h1 {
+  font-size: 15vw;
+  animation: scroll2 13s linear infinite both;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 100;
+}
+#page4 .ltext {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 35vw;
+  margin: 0;
+}
+#page4 .ltext p {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  width: 43vw;
+  font-size: 2vw;
+  line-height: 3vw;
+}
+#page4 .scrollers {
+  transform: translateX(10vw) rotateZ(-20deg);
+  margin-bottom: 10vh;
+}
+#page4 .mem {
+  width: 150vw;
+  height: 30vh;
+  display: flex;
+  white-space: nowrap;
+  margin-bottom: 5vh;
+}
+#page4 .mem .ava {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 174, 216);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+#page4 .scrollers .mem:nth-child(1) .ava:nth-child(4) {
+  transform: rotateZ(20deg);
+  background-image: url("./assets/images/dev-2.png");
+  background-size: contain;
+}
+#page4 .scrollers .mem:nth-child(1) .ava:nth-child(5) {
+  transform: rotateZ(20deg);
+  background-image: url("./assets/images/dev-3.png");
+  background-size: contain;
+}
+#page4 .scrollers .mem:nth-child(1) .ava:nth-child(6) {
+  transform: rotateZ(20deg);
+  background-image: url("./assets/images/tibo.png");
+  background-size: contain;
+}
+#page4 .scrollers .mem:nth-child(2) .ava:nth-child(8) {
+  transform: rotateZ(20deg);
+  background-image: url("./assets/images/jhoanna.png");
+  background-size: contain;
+}
+#page5 .we {
+  height: 100vh;
+}
+#page5 .we .wel {
+  height: 80%;
+}
+#page5 .we .wel h4 {
+  color: rgb(212, 201, 81);
+}
+#page5 .we .wel h1 {
+  font-size: 5vw;
+  color: rgb(212, 201, 81);
+}
+#page5 .buttons button {
+  padding: 1vh 2vw;
+  background-color: transparent;
+  color: rgb(212, 201, 81);
+  font-size: 2vw;
+  border: 2px solid rgb(212, 201, 81);
+  border-radius: calc((4vw + 6vh) / 2);
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .p1top p {
+    width: 28vw;
+    font-size: 2vh;
+    line-height:initial;
+  }
+  .p1top h1 {
+    font-size: 5vh;
+    line-height: 1.2vh;
+  }
+  #page1 {
+    height: 150vh;
+  }
+  #page1 .p1bottom h1 {
+    font-size: 2vh;
+    line-height: 1.2vw;
+  }
+  #page1 .p1bottom i {
+    font-size: 2vh;
+    line-height: 1.2vw;
+  }
+  #page1 .p1bottom .p1left .text h1 {
+    font-size: 5vh;
+  }
+  #page1 .p1bottom {
+    flex-direction: column;
+  }
+  #page1 .p1bottom {
+    height: 100vh;
+  }
+  #page1 .p1bottom .p1left {
+    width: 98vw;
+    height: 60vh;
+    flex-shrink: 0;
+    row-gap: 30%;
+    column-gap: 40%;
+  }
+  #page1 .p1bottom .r1top .t1left {
+    height: 48vw;
+    width: 48vw;
+    border-radius: 50%;
+  }
+  #page1 .p1bottom .r1top .t1right {
+    height: 48vw;
+    width: 48vw;
+    border-radius: 50%;
+  }
+  #page1 .p1bottom .p1right .compo .texty {
+    height: 5vh;
+    justify-content: space-between;
+    font-size: 2vh;
+    flex-direction: column-reverse;
+    transform: translateY(-20vw);
+  }
+  #page1 .p1bottom .r1bottom {
+    width: 98vw;
+  }
+  #textrot {
+    display: none;
+  }
+  #page2 {
+    height: 180vh;
+  }
+  #page2 .we {
+    height: 50vh;
+  }
+  #page2 .we .wel h4 {
+    font-size: 2vh;
+    margin-bottom: 7vh;
+  }
+  #page2 .we .wel h1 {
+    font-size: 4vh;
+    line-height: initial;
+  }
+  #page2 .crafttext :nth-child(1) {
+    display: none;
+  }
+  #page2 .crafttext .cr1 h1 {
+    display: initial;
+    font-size: 1.4vh;
+    line-height: initial;
+  }
+  #page2 .crafttext .cr1 p {
+    font-size: 1.4vh;
+    line-height: initial;
+  }
+  #page2 .overcrafts h2 {
+    font-size: 1vh;
+  }
+  #page2 .overcrafts h1 {
+    font-size: 2vh;
+  }
+  #page3 .p3compo .center {
+    height: 7vh;
+    width: 70%;
+  }
+  #page3 .p3compo h1 {
+    font-size: 1.3vh;
+  }
+  #page3 #p3top {
+    border-radius: calc((4vw + 6vh) / 2);
+  }
+  #page3 .p3compo {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+    border-radius: 15vh;
+  }
+  #page3 .p3compo .gridWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #page3 .p3compo .gridWrapper:nth-child(2) {
+    display: none;
+  }
+  #page3 .p3compo .gridWrapper:nth-child(3) {
+    display: none;
+  }
+  #page4 {
+    height: 100vh;
+    flex-shrink: 0;
+    padding: 0;
+  }
+  #page4 .text {
+    margin-top: 15vh;
+    height: 15vh;
+  }
+  #page4 .ltext {
+    height: 15vh;
+    align-items: flex-start;
+  }
+  #page4 .ltext p {
+    width: 70vw;
+    line-height: initial;
+    font-size: 2vh;
+  }
+  #page4 .scrollers {
+    margin-top: 25vh;
+    transform: translateX(-80%) rotateZ(-20deg);
+  }
+  #page4 .mem {
+    padding: 0;
+    height: 17vh;
+  }
+  #page4 .mem .ava {
+    height: 20vh;
+    width: 20vh;
+  }
+  #page4 .scrollers .mem:nth-child(1) {
+    transform: translateX(-80%);
+  }
+  #page4 .scrollers .mem:nth-child(2) .ava:nth-child(6) {
+    transform: rotateZ(20deg);
+    background-image: url("./assets/images/jhoanna.png");
+    background-size: contain;
+  }
+  #page5,
+  #page5 .we {
+    height: 70vh;
+  }
+  #page5 .we .wel h4 {
+    font-size: 3vh;
+  }
+  #page5 .we .wel h1 {
+    font-size: 3vh;
+  }
+  #page5 .buttons button {
+    font-size: 3vh;
+  }
+} ;
