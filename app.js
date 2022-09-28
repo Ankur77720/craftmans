@@ -3,6 +3,17 @@ function locoTrigger() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    getDirection: true,
+    mobile: {
+      breakpoint: 0,
+      smooth: true,
+      getDirection: true,
+    },
+    tablet: {
+      breakpoint: 0,
+      smooth: true,
+      getDirection: true,
+    },
   });
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
