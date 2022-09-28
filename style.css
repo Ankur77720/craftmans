@@ -49,7 +49,7 @@ body {
 }
 .p1top h1 {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 3vw;
   line-height: 1.2vw;
 }
@@ -159,7 +159,7 @@ body {
 
 #page1 .p1bottom h1 {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.3vw;
   white-space: nowrap;
   pointer-events: none;
@@ -492,7 +492,7 @@ body {
   font-size: 15vw;
   animation: scroll2 13s linear infinite both;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 400;
 }
 #page4 .ltext {
   width: 100vw;
