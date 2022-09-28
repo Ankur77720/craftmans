@@ -41,13 +41,16 @@ body {
   user-select: none;
   font-family: "satoshi";
 }
-.p1top p {
-  width: 10vw;
+.p1top h1::before {
+  content: "The";
+  top: -110%;
+  left: 15%;
   font-size: 1.1vw;
-  /* font-weight: 600; */
-  line-height: 0.9vw;
+  position: absolute;
+  
 }
 .p1top h1 {
+    position: relative;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 3vw;
@@ -572,10 +575,9 @@ body {
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  .p1top p {
-    width: 28vw;
-    font-size: 2vh;
-    line-height: initial;
+  .p1top h1::before {
+    font-size: 2.5vh;
+    top: -160%;
   }
   .p1top h1 {
     font-size: 5vh;
